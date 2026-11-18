@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日吃瓜社-网络热点事件追踪与舆论梳理</title>
+<meta name="description" content="每日吃瓜社聚焦网络热点事件，按时间线整理爆料原文、当事人回应与平台处置结果，附截图版本比对、评论区舆论分层与可核对事实清单，帮你看清事件全貌。">
+<meta name="keywords" content="每日吃瓜社">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23197a4a'/%3E%3Cpath d='M32 14c9 0 16 7 16 16 0 4-1.5 7.6-4 10.4L32 52 20 40.4C17.5 37.6 16 34 16 30c0-9 7-16 16-16z' fill='%23fff3cf'/%3E%3Ccircle cx='26' cy='29' r='2.6' fill='%23197a4a'/%3E%3Ccircle cx='38' cy='29' r='2.6' fill='%23197a4a'/%3E%3Cpath d='M26 37c3 2.6 9 2.6 12 0' stroke='%23197a4a' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"name":"每日吃瓜社",
+"description":"网络热点事件追踪与舆论梳理",
+"inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{"@type":"Question","name":"吃瓜时怎么判断爆料截图有没有被改过？","acceptedAnswer":{"@type":"Answer","text":"先看截图里的系统时间与聊天时间是否自洽，再看头像残留像素和气泡间距，最后去原平台搜索同一账号的历史发言。三个环节里有一处对不上，就要标记为待核实。"}},
+{"@type":"Question","name":"当事人发声明后，事件算反转了吗？","acceptedAnswer":{"@type":"Answer","text":"不算。声明只是其中一方的叙述，要和聊天记录原件、平台站内信、第三方目击信息并排看，声明里未回应的关键时间点才是重点。"}},
+{"@type":"Question","name":"平台下架帖子和删帖有什么区别？","acceptedAnswer":{"@type":"Answer","text":"下架通常有站内通知和理由字段，可在申诉记录里查到；删帖多数不留通知。前者可以复盘处置规则，后者只能靠截图对比。"}},
+{"@type":"Question","name":"热搜词条消失说明事件结束了吗？","acceptedAnswer":{"@type":"Answer","text":"热搜只是曝光位，词条掉榜常由自然衰减、话题合并或平台运营调整造成，和事件本身是否查清没有必然关系。"}},
+{"@type":"Question","name":"搬运爆料时需要注意哪些边界？","acceptedAnswer":{"@type":"Answer","text":"不搬运未打码的身份证号、手机号和未成年人正脸，不把推测写成结论，转述时保留原话和发布时间，方便后来者核对。"}}
+]
+}
+</script>
+<style>
+:root{
+--green:#197a4a;
+--green-dark:#10522f;
+--green-soft:#e8f4ec;
+--melon:#f0685a;
+--melon-soft:#fdeeea;
+--ink:#1c2320;
+--ink-2:#3f4a44;
+--ink-3:#6b7570;
+--line:#dde5df;
+--bg:#f7faf7;
+--card:#ffffff;
+--radius:12px;
+--radius-s:8px;
+--shadow:0 2px 10px rgba(25,58,40,.07);
+--shadow-h:0 6px 18px rgba(25,58,40,.12);
+--sp:16px;
+--font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+--ann-h:38px;
+--head-h:62px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.75;font-size:15.5px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.4;color:var(--ink)}
+h2{font-size:clamp(20px,2.4vw,25px);letter-spacing:.5px}
+h3{font-size:17px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;z-index:60;background:var(--green-soft);border-bottom:1px solid #cfe3d5}
+.ann{display:flex;align-items:center;gap:10px;height:var(--ann-h);font-size:13px;color:var(--green-dark);white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.ann::-webkit-scrollbar{display:none}
+.ann .tag{flex:none;background:var(--green);color:#fff;border-radius:4px;padding:1px 7px;font-size:12px}
+.ann b{font-weight:600}
+.ann .sep{color:#9db9a8}
+header.site{position:sticky;top:var(--ann-h);z-index:55;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.head-in{display:flex;align-items:center;gap:18px;height:var(--head-h)}
+.brand{display:flex;align-items:center;gap:9px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .bname{font-weight:800;font-size:18px;color:var(--green-dark);letter-spacing:.5px;white-space:nowrap}
+nav.main{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{flex:none;font-size:14px;color:var(--ink-2);padding:7px 10px;border-radius:6px;white-space:nowrap}
+nav.main a:hover{background:var(--green-soft);text-decoration:none;color:var(--green-dark)}
+nav.main a.on{background:var(--green);color:#fff}
+.head-tools{display:flex;align-items:center;gap:10px;flex:none}
+.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:20px;background:#fff;padding:3px 4px 3px 12px}
+.search input{border:0;outline:0;font-size:13.5px;width:120px;font-family:inherit;background:transparent;color:var(--ink)}
+.search button{border:0;background:var(--green);color:#fff;border-radius:16px;padding:4px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.search button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #f0a93c;outline-offset:2px}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:8px;width:38px;height:38px;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-6px}
+.menu-btn span::after{top:6px}
+.searchmsg{font-size:13px;color:var(--melon);margin-left:4px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#10522f 0%,#197a4a 52%,#2a8f5c 100%);color:#eaf6ee}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:46px 0 50px}
+.hero .kick{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:20px;padding:3px 12px;font-size:12.5px;letter-spacing:1px}
+.hero h1{font-size:clamp(30px,4.4vw,44px);color:#fff;margin:14px 0 12px;letter-spacing:1.5px}
+.hero p.lead{color:#d6ecdd;font-size:15.5px;max-width:30em}
+.hero .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:9px 18px;border-radius:24px;font-size:14px;font-weight:600;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn.solid{background:#fff3cf;color:#3a2c00}
+.btn.solid:hover{background:#ffeaa8;text-decoration:none}
+.btn.ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.hero-stats{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap}
+.hero-stats div{font-size:12.5px;color:#b9dcc5}
+.hero-stats b{display:block;font-size:22px;color:#fff;font-weight:800}
+.hero-art{position:relative;height:250px}
+.hero-art svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-art .cap{position:absolute;left:8px;bottom:6px;font-size:12px;color:#c6e3d0;letter-spacing:.5px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;padding:40px 0 20px}
+.maincol{min-width:0}
+.side{min-width:0}
+section.blk{margin-bottom:44px;scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 12px)}
+.blk-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:6px;border-bottom:2px solid var(--green);padding-bottom:8px}
+.blk-head h2{display:flex;align-items:center;gap:9px}
+.blk-head h2::before{content:"";width:6px;height:20px;border-radius:3px;background:var(--melon)}
+.blk-head .more{font-size:13px;color:var(--ink-3);flex:none}
+.blk-desc{font-size:13.5px;color:var(--ink-3);margin:8px 0 16px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:4px;background:var(--green-soft);color:var(--green-dark);white-space:nowrap}
+.tag.hot{background:var(--melon-soft);color:#b83a2c}
+.tag.wait{background:#fff4d6;color:#8a6100}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.card h3{font-size:15.5px;margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--ink-2)}
+.meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--ink-3);margin-top:10px}
+.card-media{overflow:hidden;border-radius:var(--radius-s);margin-bottom:10px;aspect-ratio:16/9}
+.card-media img{width:100%;height:100%;object-fit:cover}
+.list-compact li{display:flex;gap:12px;padding:11px 4px;border-bottom:1px dashed var(--line);align-items:baseline}
+.list-compact li:last-child{border-bottom:0}
+.list-compact .time{flex:none;font-size:12.5px;color:var(--ink-3);width:62px;font-variant-numeric:tabular-nums}
+.list-compact .t{font-size:14.3px;color:var(--ink-2)}
+.list-compact .t b{color:var(--ink);font-weight:600}
+.channel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.channel{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);padding:12px 12px 10px;transition:.18s}
+.channel:hover{border-color:var(--green);background:var(--green-soft);text-decoration:none;transform:translateY(-2px)}
+.channel strong{display:block;font-size:14.5px;color:var(--ink);margin-bottom:2px}
+.channel span{font-size:12px;color:var(--ink-3)}
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 10px;box-shadow:var(--shadow)}
+.deep h3{margin:22px 0 8px;padding-left:12px;border-left:4px solid var(--melon);font-size:17.5px}
+.deep h3:first-of-type{margin-top:6px}
+.deep p{margin-bottom:12px;font-size:15px;color:var(--ink-2)}
+.deep ul{margin:0 0 14px 2px}
+.deep ul li{position:relative;padding-left:16px;margin-bottom:6px;font-size:14.5px;color:var(--ink-2)}
+.deep ul li::before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+.claim{background:var(--green-soft);border-left:4px solid var(--green);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:12px 16px;margin:12px 0;font-size:14.5px;color:var(--green-dark)}
+.compare{width:100%;border-collapse:collapse;font-size:13.8px;margin:10px 0 16px;background:#fff}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:var(--green-soft);color:var(--green-dark);font-weight:600}
+.compare td:first-child{white-space:nowrap;color:var(--ink);font-weight:600}
+.steps{display:grid;gap:12px;counter-reset:st}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:14px 16px 14px 58px;box-shadow:var(--shadow)}
+.step::before{counter-increment:st;content:counter(st);position:absolute;left:14px;top:13px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step h4{font-size:14.8px;margin-bottom:3px}
+.step p{font-size:13.5px;color:var(--ink-2)}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden}
+.faq summary{cursor:pointer;padding:13px 16px 13px 42px;position:relative;font-weight:600;font-size:14.8px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";position:absolute;left:15px;top:12px;font-size:18px;color:var(--green);font-weight:700}
+.faq details[open] summary::before{content:"−"}
+.faq details p{padding:0 16px 14px 42px;font-size:14px;color:var(--ink-2)}
+.cmt{display:grid;gap:12px}
+.cmt-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius-s);padding:13px 15px;box-shadow:var(--shadow)}
+.cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--green-soft);color:var(--green-dark);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.cmt-top b{font-size:13.5px}
+.cmt-top .meta{margin:0;margin-left:auto;font-size:12px}
+.cmt-item p{font-size:14px;color:var(--ink-2)}
+.cmt-item q{font-style:normal;background:var(--green-soft);padding:0 3px;border-radius:3px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{font-size:13px;border:1px solid var(--line);border-radius:16px;padding:4px 12px;background:#fff;color:var(--ink-2)}
+.tags a:hover{border-color:var(--green);color:var(--green-dark);background:var(--green-soft);text-decoration:none}
+.rank{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.rank li{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px dashed var(--line)}
+.rank li:last-child{border-bottom:0}
+.rank .no{flex:none;width:24px;height:24px;border-radius:6px;background:var(--green-soft);color:var(--green-dark);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.rank li:nth-child(1) .no{background:var(--melon);color:#fff}
+.rank .info{flex:1;min-width:0}
+.rank .info a{font-size:14px;color:var(--ink)}
+.rank .info span{display:block;font-size:12px;color:var(--ink-3)}
+.rank .heat{font-size:12px;color:var(--melon);flex:none;font-variant-numeric:tabular-nums}
+.quote{background:linear-gradient(135deg,#10522f,#197a4a);border-radius:var(--radius);color:#e7f5ec;padding:20px 22px;box-shadow:var(--shadow)}
+.quote p{font-size:14.5px;color:#d9eee1}
+.quote .who{margin-top:10px;font-size:12.5px;color:#a9d2b8}
+.timeline li{position:relative;padding:0 0 18px 24px;border-left:2px solid var(--line)}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--green)}
+.timeline li.hot::before{border-color:var(--melon)}
+.timeline .tm{font-size:12.5px;color:var(--melon);font-weight:600;font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:14px;color:var(--ink-2)}
+.timeline .tx b{color:var(--ink)}
+.aside-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin-bottom:18px}
+.aside-card h3{font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--line);display:flex;align-items:center;gap:8px}
+.aside-card h3::before{content:"";width:4px;height:15px;background:var(--green);border-radius:2px}
+.side-nav a{display:block;font-size:13.8px;color:var(--ink-2);padding:6px 10px;border-radius:6px;border-left:3px solid transparent}
+.side-nav a:hover{background:var(--green-soft);text-decoration:none}
+.side-nav a.on{background:var(--green-soft);border-left-color:var(--green);color:var(--green-dark);font-weight:600}
+.sensor li{display:flex;justify-content:space-between;gap:8px;font-size:13.3px;padding:6px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.sensor li:last-child{border-bottom:0}
+.sensor .v{color:var(--ink-3);font-size:12.5px;flex:none}
+footer{background:#132c20;color:#c4d8cb;margin-top:30px;padding:38px 0 20px;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:26px}
+.foot-brand{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.foot-brand svg{width:30px;height:30px}
+.foot-brand b{color:#fff;font-size:17px;letter-spacing:.5px}
+footer h4{color:#fff;font-size:14px;margin-bottom:10px}
+footer a{color:#a9c9b5;display:block;padding:3px 0;font-size:13px}
+footer a:hover{color:#fff}
+footer .note{font-size:12.3px;color:#8fae9b;line-height:1.8}
+.foot-bottom{border-top:1px solid #26463a;margin-top:26px;padding-top:16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;font-size:12.3px;color:#8fae9b}
+#toTop{position:fixed;right:18px;bottom:22px;width:42px;height:42px;border-radius:50%;border:0;background:var(--green);color:#fff;font-size:18px;cursor:pointer;box-shadow:var(--shadow-h);opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:focus-visible{outline:3px solid #f0a93c;outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:960px){
+.layout{grid-template-columns:1fr;gap:26px}
+.side{order:2}
+.maincol{order:1}
+.hero-in{grid-template-columns:1fr;gap:18px;padding:34px 0 38px}
+.hero-art{height:190px;order:-1}
+.grid3{grid-template-columns:repeat(2,1fr)}
+.channel-grid{grid-template-columns:repeat(3,1fr)}
+.foot-grid{grid-template-columns:1fr 1fr}
+nav.main{display:none}
+nav.main.open{display:flex;position:absolute;left:0;right:0;top:100%;background:#fff;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);gap:4px}
+.menu-btn{display:flex}
+.head-in{position:relative}
+.search input{width:90px}
+}
+@media(max-width:600px){
+.grid3,.grid2{grid-template-columns:1fr}
+.channel-grid{grid-template-columns:repeat(2,1fr)}
+.deep{padding:18px 16px 6px}
+.hero h1{letter-spacing:.5px}
+.hero-stats{gap:16px}
+.head-in{gap:10px;flex-wrap:nowrap}
+.brand .bname{font-size:16px}
+.search{display:none}
+.search.mobile-open{display:flex;position:absolute;top:100%;left:0;right:0;margin:6px 12px;background:#fff;z-index:5;box-shadow:var(--shadow)}
+.search.mobile-open input{flex:1;width:auto}
+.foot-grid{grid-template-columns:1fr}
+.list-compact .time{width:56px}
+#toTop{right:12px;bottom:14px;width:38px;height:38px}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.card:hover,.channel:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="topbar" id="annbar">
+<div class="wrap">
+<div class="ann" role="status">
+<span class="tag">每日吃瓜社</span>
+<b>11月8日更新</b><span class="sep">|</span>
+<span>“夜间便利店监控视频”爆料帖 11月7日 22:40 由账号<b>@巷口观察</b>补发原件，已进入对照表</span>
+<span class="sep">|</span>
+<span>本周新增裁决公告 3 份，其中 2 份涉及同一 MCN 机构</span>
+</div>
+</div>
+</div>
+<header class="site">
+<div class="wrap head-in">
+<a class="brand" href="/#top" aria-label="每日吃瓜社首页">
+<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#197a4a"/><path d="M32 14c9 0 16 7 16 16 0 4-1.5 7.6-4 10.4L32 52 20 40.4C17.5 37.6 16 34 16 30c0-9 7-16 16-16z" fill="#fff3cf"/><circle cx="26" cy="29" r="2.6" fill="#197a4a"/><circle cx="38" cy="29" r="2.6" fill="#197a4a"/><path d="M26 37c3 2.6 9 2.6 12 0" stroke="#197a4a" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+<span class="bname">每日吃瓜社</span>
+</a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav"><span></span><span class="sr">展开导航</span></button>
+<nav class="main" id="mainNav" aria-label="主题导航">
+<a href="/#overview" class="on">事件总览</a>
+<a href="/#picks">精选爆料</a>
+<a href="/#latest">最新动态</a>
+<a href="/#channels">频道分类</a>
+<a href="/#deep">深度解析</a>
+<a href="/#guide">核实指南</a>
+<a href="/#faq">常见疑问</a>
+<a href="/#comments">评论区</a>
+<a href="/#news">相关资讯</a>
+<a href="/#rank">热榜</a>
+</nav>
+<div class="head-tools">
+<div class="search" id="searchBox">
+<input type="search" id="q" placeholder="搜条目或账号" aria-label="站内搜索">
+<button type="button" id="go">查找</button>
+</div>
+</div>
+</div>
+</header>
+<div id="top"></div>
+<section class="hero" aria-label="主题首屏">
+<div class="wrap hero-in">
+<div>
+<span class="kick">事件档案 · 逐条核对</span>
+<h1>每日吃瓜社</h1>
+<p class="lead">把散落在微博、小红书、抖音、B站的爆料帖归到同一条时间线上，标注原始出处、截图版本、当事人回应和平台处置结果。看到的是证据链，不只是热闹。</p>
+<div class="acts">
+<a class="btn solid" href="/#latest">看今天的新增条目</a>
+<a class="btn ghost" href="/#guide">先学核对方法</a>
+</div>
+<div class="hero-stats">
+<div><b>47</b>在跟事件</div>
+<div><b>216</b>已归档条目</div>
+<div><b>5</b>层证据分级</div>
+<div><b>3</b>人交叉核对</div>
+</div>
+</div>
+<div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 420 250" role="img">
+<defs>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#f0685a"/></linearGradient>
+</defs>
+<circle cx="330" cy="60" r="46" fill="url(#g1)" opacity=".9"/>
+<rect x="40" y="152" width="250" height="84" rx="12" fill="#ffffff" opacity=".14"/>
+<rect x="58" y="168" width="150" height="10" rx="5" fill="#ffffff" opacity=".55"/>
+<rect x="58" y="188" width="200" height="8" rx="4" fill="#ffffff" opacity=".35"/>
+<rect x="58" y="206" width="120" height="8" rx="4" fill="#ffffff" opacity=".3"/>
+<path d="M60 120 L120 60 L180 120 Z" fill="#ffffff" opacity=".16"/>
+<path d="M150 120 L215 44 L280 120 Z" fill="#ffffff" opacity=".22"/>
+<circle cx="235" cy="90" r="7" fill="#fff3cf"/>
+<circle cx="120" cy="90" r="5" fill="#f0685a"/>
+<path d="M300 130 L360 130 L360 200 L300 200 Z" fill="#ffffff" opacity=".1"/>
+<path d="M312 150 l10 8 -10 8" stroke="#fff3cf" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M338 158 h14" stroke="#fff3cf" stroke-width="4" stroke-linecap="round"/>
+</svg>
+<span class="cap">证据分层示意：帖子、原件、回应、裁决</span>
+</div>
+</div>
+</section>
+<div class="wrap layout">
+<main class="maincol">
+
+<section class="blk" id="overview">
+<div class="blk-head"><h2>这一类热点事件在跟什么</h2><a class="more" href="/#rank">热榜入口</a></div>
+<p class="blk-desc">按“爆料—扩散—回应—处置”四段拆分，每条都留可回查的原始链接截图和发布时间。</p>
+<div class="grid3">
+<div class="card">
+<h3>社交平台聊天记录爆料</h3>
+<p>微信截图、群聊录屏、私信对话是主要素材。争议点集中在头像拼接痕迹、时间戳错位、撤回消息残留三处。</p>
+<div class="meta"><span class="tag">截图鉴定</span><span>累计 63 条</span></div>
+</div>
+<div class="card">
+<h3>短视频切片与二次剪辑</h3>
+<p>抖音、快手上的切片常被加速或裁掉上下文。核对时要找原始直播回放，看弹幕时间轴是否连贯。</p>
+<div class="meta"><span class="tag">切片溯源</span><span>累计 41 条</span></div>
+</div>
+<div class="card">
+<h3>账号运营与合约束约</h3>
+<p>涉及 MCN 机构解约、账号归属、收益分成。落点常在平台公告、法院文书或当事人律师函。</p>
+<div class="meta"><span class="tag">账号归属</span><span>累计 29 条</span></div>
+</div>
+<div class="card">
+<h3>直播带货口碑争议</h3>
+<p>退货率、样品与实际发货差异、话术承诺是高频争点。平台客服工单和抽检报告最有说服力。</p>
+<div class="meta"><span class="tag">带货售后</span><span>累计 34 条</span></div>
+</div>
+<div class="card">
+<h3>素人隐私被扒</h3>
+<p>未成年人正脸、身份证号、家庭住址一经传播就不再可控。这类条目默认不做二次转载，只记录处置结果。</p>
+<div class="meta"><span class="tag hot">边界提醒</span><span>累计 18 条</span></div>
+</div>
+<div class="card">
+<h3>品牌公关声明</h3>
+<p>措辞里的“已关注”“正在核实”“保留追责权利”各有不同含义，需与后续动作对照判断诚意。</p>
+<div class="meta"><span class="tag">声明解读</span><span>累计 31 条</span></div>
+</div>
+</div>
+</section>
+
+<section class="blk" id="picks">
+<div class="blk-head"><h2>精选爆料：本周值得逐条看完的三件事</h2><a class="more" href="/#latest">全部条目</a></div>
+<div class="grid2">
+<div class="card">
+<div class="card-media"><img src="https://picsum.photos/seed/guashe-pick1/640/360" width="640" height="360" loading="lazy" alt="夜间便利店收银台监控画面示意"></div>
+<h3>便利店监控原件与转发版本差异</h3>
+<p>11月7日 22:40 补发的 4 分 12 秒原件，比 10月29日首发的剪辑版多出收银台前 41 秒对话。剪辑版删掉的正是双方关于退款金额的口头约定。</p>
+<div class="meta"><span class="tag hot">已比对</span><span>@巷口观察</span><span>11月7日</span></div>
+</div>
+<div class="card">
+<div class="card-media"><img src="https://picsum.photos/seed/guashe-pick2/640/360" width="640" height="360" loading="lazy" alt="手机聊天界面截图取证示意"></div>
+<h3>“小号互撕”两张截图的像素级对照</h3>
+<p>两张截图同一句“你先把货退了”，气泡间距差 3px，字体渲染也不同。第三方取证工具比对结论：其中一张有二次编辑痕迹。</p>
+<div class="meta"><span class="tag wait">待回应</span><span>取证编号 A-114</span><span>11月5日</span></div>
+</div>
+<div class="card">
+<h3>MCN 解约公告里的两处日期矛盾</h3>
+<p>公告落款 11月2日，正文写“合约已于 10月31日终止”，但账号主页的机构认证直到 11月4日才撤下。三处时间点目前无人解释。</p>
+<div class="meta"><span class="tag">规则差异</span><span>公告原文截图</span></div>
+</div>
+<div class="card">
+<h3>直播间“原价 899 现价 199”的话术留档</h3>
+<p>网友保存的 10月26日直播回放显示，同款商品在 9月标价 219。比价工具的价格曲线可作旁证，但两款包装规格不同，尚不能直接等同。</p>
+<div class="meta"><span class="tag">价格对比</span><span>回放 2 段</span></div>
+</div>
+</div>
+</section>
+
+<section class="blk" id="latest">
+<div class="blk-head"><h2>最新动态：今天与昨天的新增</h2><a class="more" href="/#news">相关资讯</a></div>
+<ul class="list-compact">
+<li><span class="time">今天 09:12</span><span class="t"><b>@巷口观察</b> 补发便利店原件并附原始文件名，拍摄设备时间与监控画面时间一致</span></li>
+<li><span class="time">今天 08:40</span><span class="t">平台客服对“小号互撕”截图给出站内信回复，称<b>已受理图片伪造举报</b>，未披露处理结果</span></li>
+<li><span class="time">昨天 21:05</span><span class="t">涉事 MCN 在公众号发第二份说明，把解约日改口为 <b>11月1日</b></span></li>
+<li><span class="time">昨天 18:30</span><span class="t">带货主播“阿棠”在直播中回应价格争议，承认 9月标价属实，称规格不同</span></li>
+<li><span class="time">昨天 14:47</span><span class="t">法院公告网更新一份网络侵权责任纠纷开庭信息，当事人姓名与本次事件账号主体一致</span></li>
+<li><span class="time">11月6日</span><span class="t">原爆料帖被设置为仅自己可见，转发链上的 <b>17 条二创帖</b>仍在</span></li>
+<li><span class="time">11月5日</span><span class="t">第三方取证机构发布 A-114 号比对报告，含 6 组局部放大图</span></li>
+</ul>
+</section>
+
+<section class="blk" id="channels">
+<div class="blk-head"><h2>频道分类：按事件类型找条目</h2><a class="more" href="/#tags">标签索引</a></div>
+<div class="channel-grid">
+<a class="channel" href="/#picks"><strong>聊天记录爆料</strong><span>截图与录屏核对</span></a>
+<a class="channel" href="/#picks"><strong>直播切片溯源</strong><span>回放与弹幕时间轴</span></a>
+<a class="channel" href="/#deep"><strong>MCN 解约纠纷</strong><span>合约与账号归属</span></a>
+<a class="channel" href="/#latest"><strong>平台处置公告</strong><span>下架、限流、封禁</span></a>
+<a class="channel" href="/#guide"><strong>截图真伪鉴定</strong><span>像素与时间戳</span></a>
+<a class="channel" href="/#comments"><strong>评论区舆论分层</strong><span>立场与证据分布</span></a>
+<a class="channel" href="/#news"><strong>律师函与开庭信息</strong><span>文书公开渠道</span></a>
+<a class="channel" href="/#rank"><strong>带货价格争议</strong><span>比价与规格差异</span></a>
+<a class="channel" href="/#faq"><strong>隐私边界提醒</strong><span>打码与转载规则</span></a>
+<a class="channel" href="/#deep"><strong>公关声明逐句拆</strong><span>措辞与后续动作</span></a>
+<a class="channel" href="/#timeline"><strong>事件时间线</strong><span>按小时归档</span></a>
+<a class="channel" href="/#quotes"><strong>当事人原话记录</strong><span>保留措辞与语境</span></a>
+</div>
+</section>
+
+<section class="blk" id="deep">
+<div class="blk-head"><h2>深度解析：反转叙事正在掩盖真正的时间差</h2></div>
+<article class="deep">
+<p>把这次便利店纠纷简化成“剪辑版骗人、原件揭真相”，听起来痛快，但站不住。原件补发之后，仍有一段 41 秒的空白没被解释：从店员按下退款键到双方开始争执，中间发生了什么，两支视频都没给。</p>
+<h3>时间线里被剪掉的不止 41 秒</h3>
+<p>按公开版本排一遍：10月29日 20:16 首发剪辑版，时长 2 分 03 秒；11月1日 15:30 当事人“阿棠”发文字回应；11月7日 22:40 原件补发，4 分 12 秒。三段素材拼起来是 6 分多钟，但首尾衔接处都出现跳帧，说明原始监控被分段导出过。</p>
+<ul>
+<li>10月29日 20:16：剪辑版上线，账号 @巷口观察，播放量 3 小时内破 80 万</li>
+<li>10月30日 11:02：涉事门店在点评平台回复“已内部核查”，未给结论</li>
+<li>11月1日 15:30：阿棠回应，称剪辑版“掐头去尾”，但未公布原件</li>
+<li>11月7日 22:40：原件补发，文件名后缀显示导出时间为 10月30日 09:47</li>
+</ul>
+<div class="claim">可被反驳的判断：原件补发晚于内部导出 8 天，这 8 天里“没有原件”的说法在逻辑上不成立。若当事方主张“刚拿到监控”，就需要解释 10月30日上午的文件生成记录。</div>
+<h3>两张截图对照：差异位置在气泡左下角</h3>
+<p>“小号互撕”的两张图，A-114 号报告标了 6 处差异，最硬的一处在气泡左下角。正常渲染的气泡圆角有 2px 抗锯齿过渡，被编辑过的那张是生硬的直角。同组报告还发现两图的状态栏电池图标朝向不同，一张是电量 61% 的竖条，一张是充电中的闪电标记。</p>
+<table class="compare">
+<caption class="sr">两张截图差异对照</caption>
+<thead><tr><th>比对项</th><th>截图 A</th><th>截图 B</th><th>结论</th></tr></thead>
+<tbody>
+<tr><td>气泡圆角</td><td>2px 抗锯齿</td><td>直角硬边</td><td>B 有编辑痕迹</td></tr>
+<tr><td>状态栏电量</td><td>61% 竖条</td><td>充电闪电</td><td>非同一次截屏</td></tr>
+<tr><td>时间戳格式</td><td>20:16</td><td>20:16:04</td><td>设置项不同</td></tr>
+<tr><td>字体字重</td><td>常规</td><td>偏粗约 1 级</td><td>可能换机或改字</td></tr>
+</tbody>
+</table>
+<p>需要说明的是，报告只对图像本身作判断，没有追溯发布者身份。把“图是编辑过的”直接推成“人在撒谎”，中间还差着发布动机这一环，目前没有直接证据。</p>
+<h3>机构公告的日期改动，暴露的是流程而非恶意</h3>
+<p>MCN 第一份公告落款 11月2日，写“合约已于 10月31日终止”；第二份把日期改成 11月1日，但没有说明改动原因。对照账号主页的机构认证撤下时间 11月4日，能看出内部流程和对外表述之间存在 3 天的空档。</p>
+<div class="claim">更稳妥的解释：解约在法务层面 10月31日已生效，运营层面 11月4日才完成认证变更，公告两次落款对应的是两个不同环节，而不是临时改口。这一解释可以被主页截图的时间戳检验，也可以被后台操作日志推翻。</div>
+<p>平台处置这边也有一处值得记下。站内信说“已受理图片伪造举报”，用的是受理而非认定，说明流程还停在初审。把受理回执当成处罚公告来转述的二创帖至少有 5 条，其中 2 条的点赞超过一万，误读规模不小。</p>
+</article>
+</section>
+
+<section class="blk" id="guide">
+<div class="blk-head"><h2>体验指南：把一条爆料看到底的四步</h2></div>
+<p class="blk-desc">这套流程适合普通围观者，不需要专业工具，一部手机加一个浏览器就能做完。</p>
+<div class="steps">
+<div class="step"><h4>先找发布时间最早的那条</h4><p>在微博按时间排序、在小红书看笔记创建时间，把首发和二创分开。首发帖的评论区往往留着楼主补充的上下文。</p></div>
+<div class="step"><h4>把截图里的时间戳抄下来</h4><p>聊天界面顶部时间、系统状态栏时间、帖子发布时间三者要能对上。对不上的先记下，别急着下结论。</p></div>
+<div class="step"><h4>去找原件而不是转发</h4><p>录屏类爆料优先找长版本，直播类爆料找平台回放。剪辑版与原件的时间差、帧差都是可核对项。</p></div>
+<div class="step"><h4>把回应和指控并排放</h4><p>声明里回避了什么，往往比声明里写了什么更关键。对照着看，标出未被回应的具体时间点。</p></div>
+</div>
+</section>
+
+<section class="blk" id="faq" >
+<div class="blk-head"><h2>常见疑问</h2></div>
+<div class="faq">
+<details><summary>吃瓜时怎么判断爆料截图有没有被改过？</summary><p>先看截图里的系统时间与聊天时间是否自洽，再看头像残留像素和气泡间距，最后去原平台搜索同一账号的历史发言。三个环节里有一处对不上，就要标记为待核实。</p></details>
+<details><summary>当事人发声明后，事件算反转了吗？</summary><p>不算。声明只是其中一方的叙述，要和聊天记录原件、平台站内信、第三方目击信息并排看。声明里未回应的关键时间点才是重点，比如便利店纠纷里那 41 秒空白，两份声明都没提。</p></details>
+<details><summary>平台下架帖子和删帖有什么区别？</summary><p>下架通常有站内通知和理由字段，可在申诉记录里查到；删帖多数不留通知。前者可以复盘处置规则，后者只能靠截图对比，证据价值差一截。</p></details>
+<details><summary>热搜词条消失说明事件结束了吗？</summary><p>热搜只是曝光位。11月3日那个词条掉榜时，法院开庭公告还没出。词条变化常由自然衰减、话题合并或平台运营调整造成，和事件本身是否查清没有必然关系。</p></details>
+<details><summary>搬运爆料时需要注意哪些边界？</summary><p>不搬运未打码的身份证号、手机号和未成年人正脸，不把推测写成结论。转述时保留原话和发布时间，方便后来者核对，也减少二次伤害。</p></details>
+<details><summary>“已受理举报”和“已处罚”差在哪？</summary><p>受理意味着进入审核队列，处罚意味着已出结果。站内信里出现“受理”字样时，事件仍在流程中，此时转述成“官方认定造假”就是误读。</p></details>
+</div>
+</section>
+
+<section class="blk" id="comments">
+<div class="blk-head"><h2>评论区：三种不同立场的声音</h2><a class="more" href="/#quotes">原话记录</a></div>
+<div class="cmt">
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">林</span><b>林间有雾</b><span class="meta">今天 10:26</span></div>
+<p>原件里收银台那段 <q>退款 47 元</q> 的对话，剪辑版确实没有。但原件也没拍到店员先把小票收走那一幕，两边都只给了对自己有利的部分。</p>
+</div>
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">陈</span><b>陈默不默</b><span class="meta">今天 09:03</span></div>
+<p>翻了 A-114 号报告的放大图，气泡左下角那处直角太明显了。<q>状态栏电池朝向不同</q>这条我之前完全没注意，这种细节才叫核实。</p>
+</div>
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">周</span><b>周末加班中</b><span class="meta">昨天 22:18</span></div>
+<p>说真的，追了三天有点累。<q>MCN 公告改了两次日期</q>，第二次连修改说明都没有，这种操作本身就让人不想再信。</p>
+</div>
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">何</span><b>何处惹尘埃</b><span class="meta">昨天 20:41</span></div>
+<p>阿棠直播里那句“规格不同”我是存疑的。9月那款 219 的链接还在，规格页写得清清楚楚，和现在 199 的对比一下就知道差在哪。</p>
+</div>
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">赵</span><b>赵家小满</b><span class="meta">11月6日 16:12</span></div>
+<p>提示一下，转发链上还有未成年人的正脸没打码，看到就举报吧。这种事比谁对谁错更要紧。</p>
+</div>
+<div class="cmt-item">
+<div class="cmt-top"><span class="avatar">许</span><b>许某人不加班</b><span class="meta">11月5日 23:07</span></div>
+<p>看完了，其实挺中性的一个事。双方都有剪辑，都不干净，非要选边站反而看不清那 41 秒去哪了。</p>
+</div>
+</div>
+</section>
+
+<section class="blk" id="news">
+<div class="blk-head"><h2>相关资讯</h2></div>
+<div class="grid2">
+<div class="card"><h3>平台治理周报提及“图片伪造举报”受理量</h3><p>11月6日发布的周报里，图片伪造类举报占比从 8% 升到 13%，未点名具体事件。</p><div class="meta"><span class="tag">平台报告</span><span>11月6日</span></div></div>
+<div class="card"><h3>第三方取证机构发布截图鉴定流程说明</h3><p>含 6 项固定检查点：时间戳、系统栏、气泡边缘、字体字重、元数据、导出路径。</p><div class="meta"><span class="tag">方法论</span><span>11月5日</span></div></div>
+<div class="card"><h3>MCN 行业合约模板被曝两种版本</h3><p>从业者贴出两版解约条款，违约金计算基数一处为流水、一处为净收益，差 3 倍左右。</p><div class="meta"><span class="tag">条款差异</span><span>11月4日</span></div></div>
+<div class="card"><h3>比价工具更新带货价格历史查询</h3><p>可回溯 90 天内商品挂牌价，但促销券叠加后的实际到手价仍需手动记录。</p><div class="meta"><span class="tag">工具更新</span><span>11月3日</span></div></div>
+</div>
+</section>
+
+<section class="blk" id="tags">
+<div class="blk-head"><h2>相关推荐标签</h2></div>
+<div class="tags">
+<a href="/#picks">聊天记录截图鉴定</a>
+<a href="/#deep">MCN 解约公告解读</a>
+<a href="/#latest">平台下架通知回执</a>
+<a href="/#guide">直播回放时间轴对照</a>
+<a href="/#comments">评论区立场分层</a>
+<a href="/#news">开庭公告查询</a>
+<a href="/#faq">未成年人信息打码</a>
+<a href="/#rank">带货价格历史比对</a>
+<a href="/#quotes">当事人原话留档</a>
+<a href="/#timeline">事件按小时归档</a>
+</div>
+</section>
+
+<section class="blk" id="rank">
+<div class="blk-head"><h2>本周热榜</h2><a class="more" href="/#timeline">看时间线</a></div>
+<div class="grid2">
+<div class="rank">
+<ol>
+<li><span class="no">1</span><span class="info"><a href="/#picks">便利店监控原件补发</a><span>@巷口观察 · 11月7日</span></span><span class="heat">82.4</span></li>
+<li><span class="no">2</span><span class="info"><a href="/#deep">小号互撕截图伪造报告</a><span>取证编号 A-114</span></span><span class="heat">76.1</span></li>
+<li><span class="no">3</span><span class="info"><a href="/#latest">MCN 公告日期改口</a><span>11月6日第二份说明</span></span><span class="heat">69.8</span></li>
+<li><span class="no">4</span><span class="info"><a href="/#rank">阿棠带货价格对比</a><span>9月 219 与 11月 199</span></span><span class="heat">61.3</span></li>
+<li><span class="no">5</span><span class="info"><a href="/#news">平台周报举报占比变化</a><span>8% 升至 13%</span></span><span class="heat">54.7</span></li>
+</ol>
+</div>
+<div id="timeline" class="card">
+<h3>事件时间线（按小时）</h3>
+<ul class="timeline" style="margin-top:10px">
+<li class="hot"><span class="tm">11月7日 22:40</span><span class="tx"><b>原件补发</b>，4 分 12 秒，附原始文件名</span></li>
+<li><span class="tm">11月6日 13:20</span><span class="tx">原爆料帖设为仅自己可见</span></li>
+<li><span class="tm">11月5日 17:05</span><span class="tx">A-114 号比对报告公开</span></li>
+<li><span class="tm">11月4日 10:33</span><span class="tx">账号主页机构认证撤下</span></li>
+<li><span class="tm">11月1日 15:30</span><span class="tx">阿棠首次文字回应</span></li>
+<li><span class="tm">10月29日 20:16</span><span class="tx">剪辑版首发，播放破 80 万</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="blk" id="quotes">
+<div class="blk-head"><h2>可信度分层与当事人证言</h2></div>
+<div class="grid2">
+<div class="quote">
+<p>“导出时间是 10月30日 09:47，不是今天才拿到的。”——@巷口观察在原件帖评论区补充，11月7日 23:02，原文措辞未改。</p>
+<div class="who">证言层 · 可核对文件名后缀</div>
+</div>
+<div class="quote" style="background:linear-gradient(135deg,#5b3a10,#8a6100)">
+<p>“合约条款里写的是净收益，公告里算成了流水，这是我们文案的疏忽。”——涉事 MCN 运营负责人对媒体口径，11月6日，未在其他渠道重复。</p>
+<div class="who">回应层 · 单方说法，待合约原文验证</div>
+</div>
+</div>
+<table class="compare" style="margin-top:16px">
+<thead><tr><th>信息层级</th><th>本次事件对应内容</th><th>核对手段</th></tr></thead>
+<tbody>
+<tr><td>事实</td><td>原件时长 4 分 12 秒，多于剪辑版</td><td>视频文件属性</td></tr>
+<tr><td>回应</td><td>MCN 称日期改动系文案疏忽</td><td>公告原文对比</td></tr>
+<tr><td>转述</td><td>二创帖称“官方认定造假”</td><td>站内信原文为“已受理”</td></tr>
+<tr><td>推测</td><td>8 天空档或因内部审批</td><td>无公开日志，暂列推测</td></tr>
+</tbody>
+</table>
+</section>
+
+</main>
+<aside class="side" aria-label="侧栏">
+<div class="aside-card">
+<h3>栏目导航</h3>
+<nav class="side-nav" id="sideNav" aria-label="侧栏导航">
+<a href="/#overview">事件总览</a>
+<a href="/#picks">精选爆料</a>
+<a href="/#latest">最新动态</a>
+<a href="/#channels">频道分类</a>
+<a href="/#deep">深度解析</a>
+<a href="/#guide">体验指南</a>
+<a href="/#faq">常见疑问</a>
+<a href="/#comments">评论区</a>
+<a href="/#news">相关资讯</a>
+<a href="/#tags">相关推荐标签</a>
+<a href="/#rank">本周热榜</a>
+<a href="/#quotes">可信度分层</a>
+</nav>
+</div>
+<div class="aside-card">
+<h3>热度指标</h3>
+<ul class="sensor">
+<li><span>在跟事件</span><span class="v">47 件</span></li>
+<li><span>今日新增条目</span><span class="v">9 条</span></li>
+<li><span>待回应事件</span><span class="v">12 件</span></li>
+<li><span>已出处置结果</span><span class="v">6 件</span></li>
+<li><span>截图待鉴定</span><span class="v">23 张</span></li>
+<li><span>本周开庭相关</span><span class="v">2 件</span></li>
+</ul>
+</div>
+<div class="aside-card">
+<h3>核对提醒</h3>
+<p style="font-size:13.3px;color:var(--ink-2)">看到“官方已处理”字样先找站内信原文。受理、核实、认定、处罚是四个不同阶段，跨阶段转述最容易失真。</p>
+<p style="font-size:13.3px;color:var(--ink-2);margin-top:8px">涉及未成年人正脸和身份证号的截图，不论真假都不再二次转发。</p>
+</div>
+</aside>
+</div>
+<footer>
+<div class="wrap">
+<div class="foot-grid">
+<div>
+<div class="foot-brand">
+<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#2a8f5c"/><path d="M32 14c9 0 16 7 16 16 0 4-1.5 7.6-4 10.4L32 52 20 40.4C17.5 37.6 16 34 16 30c0-9 7-16 16-16z" fill="#fff3cf"/><circle cx="26" cy="29" r="2.6" fill="#197a4a"/><circle cx="38" cy="29" r="2.6" fill="#197a4a"/><path d="M26 37c3 2.6 9 2.6 12 0" stroke="#197a4a" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+<b>每日吃瓜社</b>
+</div>
+<p class="note">把爆料、原件、回应、裁决分开摆放，按时间归档，标注可核对项。</p>
+</div>
+<div>
+<h4>事件栏目</h4>
+<a href="/#overview">事件总览</a>
+<a href="/#picks">精选爆料</a>
+<a href="/#latest">最新动态</a>
+<a href="/#deep">深度解析</a>
+</div>
+<div>
+<h4>核实工具</h4>
+<a href="/#guide">体验指南</a>
+<a href="/#faq">常见疑问</a>
+<a href="/#tags">标签索引</a>
+<a href="/#quotes">可信度分层</a>
+</div>
+<div>
+<h4>数据说明</h4>
+<p class="note">站内条目、账号名、时间与数字均为示例数据，用于展示归档结构；涉及现实人物与机构的部分请以原始平台公开信息为准。</p>
+<p class="note" style="margin-top:8px">内容更新时间：2026年11月8日 09:40，对应“最新动态”栏目内 2 条当日新增。</p>
+</div>
+</div>
+<div class="foot-bottom">
+<span>© 2026 每日吃瓜社 · 示例站点</span>
+<span>内容仅供信息核对练习，不构成事实认定</span>
+</div>
+</div>
+</footer>
+<button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+<script>
+(function(){
+var q=document.getElementById('q'),go=document.getElementById('go'),msg=null;
+function norm(s){return (s||'').toLowerCase().replace(/\s+/g,'');}
+function doSearch(){
+var kw=norm(q.value);
+if(!kw){show('请输入条目或账号关键词');return;}
+var hits=[],miss=[];
+document.querySelectorAll('main .card, main .list-compact li, main .channel, main .faq details, main .cmt-item, main .rank li').forEach(function(el){
+var txt=norm(el.textContent);
+if(txt.indexOf(kw)>-1){hits.push(el);}
+});
+if(!hits.length){show('没有找到“'+q.value+'”相关条目，换个账号名或事件关键词试试');return;}
+show('找到 '+hits.length+' 条相关条目，已为你定位第一条');
+hits[0].scrollIntoView({behavior:'smooth',block:'center'});
+hits.forEach(function(el){el.style.outline='2px solid #f0685a';setTimeout(function(){el.style.outline='';},2200);});
+}
+function show(t){
+if(!msg){msg=document.createElement('span');msg.className='searchmsg';document.getElementById('searchBox').appendChild(msg);}
+msg.textContent=t;
+clearTimeout(show.t);
+show.t=setTimeout(function(){if(msg){msg.textContent='';}},4200);
+}
+go.addEventListener('click',doSearch);
+q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});
+var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',function(){
+var open=nav.classList.toggle('open');
+menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+nav.addEventListener('click',function(e){
+if(e.target.tagName==='A'&&window.innerWidth<=960){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}
+});
+document.querySelectorAll('main section[id], aside a[href^="/#"]').forEach(function(){});
+var secs=[].slice.call(document.querySelectorAll('main section[id]'));
+var sideLinks=[].slice.call(document.querySelectorAll('#sideNav a'));
+var headLinks=[].slice.call(document.querySelectorAll('nav.main a'));
+function onScroll(){
+var y=window.scrollY+120,cur=secs[0]?secs[0].id:'';
+secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+sideLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='/# '+cur||a.getAttribute('href')==='/'+'#'+cur);});
+headLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='/'+'#'+cur);});
+var t=document.getElementById('toTop');
+if(window.scrollY>520){t.classList.add('show');}else{t.classList.remove('show');}
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+var top=document.getElementById('toTop');
+top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+var searchBox=document.getElementById('searchBox');
+document.addEventListener('keydown',function(e){
+if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();if(window.innerWidth<=600){searchBox.classList.add('mobile-open');}q.focus();}
+});
+})();
+</script>
+</body>
+  </html>
